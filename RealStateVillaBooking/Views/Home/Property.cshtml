@@ -1,0 +1,57 @@
+﻿@*@
+@{
+    ViewData["Title"] = "Property";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<br />
+<br />
+<br />
+
+<form method="post" class="row g-8">
+    <div class="col-md-6">
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Email">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Mobile">Mobile</label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Message">Message</label>
+                <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6" style="padding-left:70px;">
+        <img src="https://www.drawhipo.com/wp-content/uploads/2021/04/Contact-us-Scene-4-Curved-520x325.png" alt="Professional People Working" class="img-fluid" style="height:550px;width:500px;padding-top:25px;">
+    </div>
+
+    <div class="col-md-12">
+        <br />
+        <button class="btn btn-primary" type="submit" style="width:630px;">Send Message</button>
+    </div>
+</form>
+*@

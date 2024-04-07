@@ -1,0 +1,131 @@
+﻿@*@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+*@
+
+<fieldset>
+    <br />
+    <center> <legend style="font-family: Arial Black; color:blue; font-size:large; font-size:30px;">Find Us Here!</legend></center>
+    <br />
+    <br />
+    <br />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(22.241030600000002, 70.9018797529635);
+            var mapProp = {
+                center: myCenter,
+                zoom: 12,
+                scrollwheel: false,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                map: map
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2KW2qNnpUtuxOxEyqfXjekvD1C9Wthhg&callback=myMap"></script>
+
+</fieldset>
+
+
+<br />
+<br />
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h5><button class="footer-button about-us-button">About Us</button></h5>
+            <p class="about-us-text">
+                A Safe Tour and Travel Agency is dedicated to providing travelers with safe, enjoyable, and memorable travel experiences. 
+                With a focus on customer satisfaction and safety, our agency offers a wide range of travel services, including domestic 
+                and international tour packages, transportation arrangements, accommodation bookings, and travel insurance.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5><button class="footer-button contact-us-button">Contact Us</button></h5>
+            <p>Address: Rajkot, Gujrat, India</p>
+            <p>Email:<a href="https://mail.google.com/mail/u/0/#inbox">psuraj982@rku.ac.in</a></p>
+            <p>Phone: +91 9956301245</p>
+            <p>WhatsApp: +91 9956443809</p>
+        </div>
+        <div class="col-md-4">
+            <h5><button class="footer-button follow-us-button">Follow Us</button></h5>
+            <p>Stay updated with our latest news and updates by following us on social media:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+            </ul>
+            <p>Follow us for exclusive content, promotions, and behind-the-scenes updates!</p>
+        </div>
+
+
+        <hr>
+       @* <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">&copy; 2024 . All rights reserved.</p>
+            </div>
+        </div>*@
+    </div>
+</div>
+
+<style>
+    .bd-color {
+        background-color: antiquewhite;
+    }
+
+    .footer-button {
+        background-color: blueviolet;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 1px 20px;
+    }
+
+    .about-us-button {
+        background-color: teal;
+        block-size: 40px;
+    }
+
+    .contact-us-button {
+        background-color: crimson;
+        block-size: 40px;
+    }
+
+    .follow-us-button {
+        background-color: darkorange;
+        block-size: 40px;
+    }
+
+    .about-us-text {
+        text-align: justify;
+    }
+
+</style>
+
+

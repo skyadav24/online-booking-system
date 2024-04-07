@@ -1,0 +1,22 @@
+﻿table{
+    width:80vw;
+    height:auto;
+    margin:auto;
+    background-color:gray;
+}
+thead{
+    background-color:black;
+    color:white;
+}
+thead tr,th{
+    font-family:'Sans Serif Collection';
+    font-size:18px;
+    text-align:left;
+    padding:5px 5px;
+}
+    tbody tr, td {
+        font-family: 'Sans Serif Collection';
+        font-size: 18px;
+        text-align: left;
+        padding: 5px 5px;
+    }

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Villa Agency - Real Estate HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="~/css/AdminLayout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <nav class="AdminNav">
+            <ul>
+                <li><a asp-action="AdminProfile" asp-controller="">Welcome, Suraj Pandey</a></li>
+                <li><a asp-action="AdminProfile" asp-controller="Admin">Admin Profile</a></li>
+                <li><a asp-action="ContactUsData" asp-controller="Admin">ContactUsData</a></li>
+                <li><a asp-action="ConatctData" asp-controller="Admin">totalAdmin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

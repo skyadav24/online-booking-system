@@ -1,0 +1,175 @@
+﻿@model ContactUs;
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*
+<fieldset>
+    <br />
+    <center> <legend style="font-family: Arial Black; color:blue; font-size:large; font-size:30px;">Find Us Here!</legend></center>
+    <br />
+    <br />
+    <br />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+
+    <script>
+        function myMap() {
+            var myCenter = new google.maps.LatLng(22.241030600000002, 70.9018797529635);
+            var mapProp = {
+                center: myCenter,
+                zoom: 12,
+                scrollwheel: false,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                map: map
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2KW2qNnpUtuxOxEyqfXjekvD1C9Wthhg&callback=myMap"></script>
+
+</fieldset>
+
+
+<br />
+<br />
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h5><button class="footer-button about-us-button">About Us</button></h5>
+            <p class="about-us-text">
+                A Safe Tour and Travel Agency is dedicated to providing travelers with safe, enjoyable, and memorable travel experiences.
+                With a focus on customer satisfaction and safety, our agency offers a wide range of travel services, including domestic
+                and international tour packages, transportation arrangements, accommodation bookings, and travel insurance.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5><button class="footer-button contact-us-button">Contact Us</button></h5>
+            <p>Address: Rajkot, Gujrat, India</p>
+            <p>Email:<a href="https://mail.google.com/mail/u/0/#inbox">psuraj982@rku.ac.in</a></p>
+            <p>Phone: +91 9956301245</p>
+            <p>WhatsApp: +91 9956443809</p>
+        </div>
+        <div class="col-md-4">
+            <h5><button class="footer-button follow-us-button">Follow Us</button></h5>
+            <p>Stay updated with our latest news and updates by following us on social media:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+            </ul>
+            <p>Follow us for exclusive content, promotions, and behind-the-scenes updates!</p>
+        </div>
+
+
+      <hr />
+    </div>
+</div>
+
+<style>
+    .bd-color {
+        background-color: antiquewhite;
+    }
+
+    .footer-button {
+        background-color: blueviolet;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 1px 20px;
+    }
+
+    .about-us-button {
+        background-color: teal;
+        block-size: 40px;
+    }
+
+    .contact-us-button {
+        background-color: crimson;
+        block-size: 40px;
+    }
+
+    .follow-us-button {
+        background-color: darkorange;
+        block-size: 40px;
+    }
+
+    .about-us-text {
+        text-align: justify;
+    }
+
+</style>
+
+
+
+
+*@
+
+
+
+<form method="post" class="row g-8">
+    <div class="col-md-6">
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Email">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Mobile">Mobile</label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label class="col-form-label" asp-for="Message">Message</label>
+                <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6" style="padding-left:70px;">
+        <img src="https://www.drawhipo.com/wp-content/uploads/2021/04/Contact-us-Scene-4-Curved-520x325.png" alt="Professional People Working" class="img-fluid" style="height:550px;width:500px;padding-top:25px;">
+    </div>
+
+    <div class="col-md-12">
+        <br />
+        <button class="btn btn-primary" type="submit" style="width:630px;">Send Message</button>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ContactUsData";
+    Layout = "~/Views/Shared/_Realstate.cshtml";
+}
+<link rel="stylesheet" href="~/css/Tabledata.css" asp-append-version="true" />
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>S.n</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>Message</th>
+                <th class="col-2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Suraj Pandey</td>
+                <td>Suraj@gmail.com</td>
+                <td>97546543132</td>
+                <td>Need a helf </td>
+                <td>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-primary">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
