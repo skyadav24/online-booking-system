@@ -39,7 +39,8 @@ namespace RealStateVillaBooking.Controllers
 
         public IActionResult table()
         {
-            return View();
+            var addtbl = s1.ContactTable.ToList();
+            return View(addtbl);
         }
     }
 }
