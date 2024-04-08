@@ -48,6 +48,10 @@
             min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
         }
 
+        .btn-go-to-contact {
+            margin-top: 20px; /* Add margin to the top */
+        }
+
     </style>
 </head>
 <body>
@@ -61,7 +65,6 @@
                     <th>Email</th>
                     <th>Mobile</th>
                     <th>Message</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -77,6 +80,13 @@
                 }
             </tbody>
         </table>
+
+        <br />
+        <br />
+        <!-- Button to go to the contact page -->
+        <div class="btn-go-to-contact">
+            <a asp-controller="ContactUs" asp-action="Contact" class="btn btn-primary">Go to Contact Page</a>
+        </div>
     </div>
 
 </body>
