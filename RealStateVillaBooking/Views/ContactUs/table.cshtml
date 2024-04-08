@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "table";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>table</h1>
+
+<div style="margin-top:10px;">
+    <center>
+        <h1><b>Contact Details</b></h1>
+    </center>
+</div>
+
+<br />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: antiquewhite; /* Choose your desired background color */
+        }
+
+        .box {
+            width: calc(33.33% - 10px);
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .box-two {
+            width: calc(50% - 10px);
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .bd-color {
+            background-color: antiquewhite;
+        }
+
+        .approve-btn {
+            padding-left: 50px;
+            padding-right: 40px;
+            /* Adjust as needed */
+        }
+
+        .reject-btn {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>
+                        <td>@item.Mobile</td>
+                        <td>@item.Message</td>
+
+                        <td role="group">
+                            <!-- Action buttons -->
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <!-- Add any action buttons here if needed -->
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

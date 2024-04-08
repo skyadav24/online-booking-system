@@ -4,9 +4,9 @@
 
 }
 nav{
-    background-color:black;
+    background-color:royalblue;
     width:100vw;
-    height:80px;
+    height:60px;
 
 }
 ul{
@@ -30,7 +30,8 @@ li{
         color: white;
         text-decoration: none;
         font-size: 20px;
-        padding: 8px 10px;
+        padding: 8px 22px;
+        margin:0px;
         box-sizing: border-box;
         font-weight: 600;
     }

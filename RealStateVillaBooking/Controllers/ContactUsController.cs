@@ -36,5 +36,10 @@ namespace RealStateVillaBooking.Controllers
             return View(dash);
 
         }
+
+        public IActionResult table()
+        {
+            return View();
+        }
     }
 }
