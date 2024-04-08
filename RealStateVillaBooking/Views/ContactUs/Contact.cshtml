@@ -128,48 +128,94 @@
 *@
 
 
-
-<form method="post" class="row g-8">
-    <div class="col-md-6">
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <label class="col-form-label" asp-for="Name">Name</label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <label class="col-form-label" asp-for="Email">Email</label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <label class="col-form-label" asp-for="Mobile">Mobile</label>
-                <input asp-for="Mobile" class="form-control" />
-                <span asp-validation-for="Mobile" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <label class="col-form-label" asp-for="Message">Message</label>
-                <textarea asp-for="Message" class="form-control" rows="5"></textarea>
-                <span asp-validation-for="Message" class="text-danger"></span>
-            </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <img src="https://www.drawhipo.com/wp-content/uploads/2021/04/Contact-us-Scene-4-Curved-520x325.png" alt="Professional People Working" class="img-fluid" style="max-height:300px;width:auto;">
         </div>
     </div>
 
-    <div class="col-md-6" style="padding-left:70px;">
-        <img src="https://www.drawhipo.com/wp-content/uploads/2021/04/Contact-us-Scene-4-Curved-520x325.png" alt="Professional People Working" class="img-fluid" style="height:550px;width:500px;padding-top:25px;">
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
 
-    <div class="col-md-12">
-        <br />
-        <button class="btn btn-primary" type="submit" style="width:630px;">Send Message</button>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
     </div>
-</form>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px; /* Adjust as needed */
+    }
+
+    .contact-form {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    /* Center the image horizontally */
+    .text-center img {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+

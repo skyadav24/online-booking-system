@@ -319,7 +319,7 @@ Header Style
 .sub-header {
   background-color: #fff;
   padding: 10px 0px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 20px solid #eee;
 }
 
 .sub-header ul li {

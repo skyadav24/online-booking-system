@@ -19,6 +19,11 @@ namespace RealStateVillaBooking.Controllers
             return View();
         }
 
+        public IActionResult Find()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Contact(ContactUs dash)
         {
