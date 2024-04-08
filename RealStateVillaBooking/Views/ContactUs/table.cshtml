@@ -1,17 +1,15 @@
-﻿
+﻿@model IEnumerable<ContactUs>
 @{
     ViewData["Title"] = "table";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-    <center>
-        <h1>Contact Details</h1>
-    </center>
-
+<h1>
+    <center>Contact Us Details</center>
+</h1>
 
 <br />
+
 
 <!DOCTYPE html>
 <html>
@@ -37,26 +35,24 @@
             border-radius: 10px;
         }
 
-        .bd-color {
-            background-color: antiquewhite;
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid black !important; /* Ensure proper table border lines */
+            padding: 20px; /* Increase padding */
         }
 
-        .approve-btn {
-            padding-left: 50px;
-            padding-right: 40px;
-            /* Adjust as needed */
-        }
-
-        .reject-btn {
-            padding-left: 50px;
-            padding-right: 50px;
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
         }
 
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="table-container">
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -65,7 +61,7 @@
                     <th>Email</th>
                     <th>Mobile</th>
                     <th>Message</th>
-                    <th>Action</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -77,16 +73,6 @@
                         <td>@item.Email</td>
                         <td>@item.Mobile</td>
                         <td>@item.Message</td>
-
-                        <td role="group">
-                            <!-- Action buttons -->
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <!-- Add any action buttons here if needed -->
-                                </div>
-                            </div>
-                        </td>
-
                     </tr>
                 }
             </tbody>
