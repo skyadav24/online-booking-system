@@ -49,8 +49,21 @@
         }
 
         .btn-go-to-contact {
-            margin-top: 20px; /* Add margin to the top */
+            margin-top: 10px; /* Add margin to the top */
+            text-align: center; /* Center the button horizontally */
+            display: inline-block; /* Display the button as a block element */
+            padding: 10px 20px; /* Add padding */
+            background-color: #ff0000; /* Red background color */
+            color: #ffffff; /* White text color */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add cursor pointer on hover */
+            transition: background-color 0.3s; /* Smooth transition for background color */
         }
+
+            .btn-go-to-contact:hover {
+                background-color: #cc0000; /* Darker red on hover */
+            }
 
     </style>
 </head>
@@ -80,14 +93,15 @@
                 }
             </tbody>
         </table>
-
-        <br />
-        <br />
-        <!-- Button to go to the contact page -->
-        <div class="btn-go-to-contact">
-            <a asp-controller="ContactUs" asp-action="Contact" class="btn btn-primary">Go to Contact Page</a>
-        </div>
     </div>
+
+    <!-- Button to go to the contact page -->
+    <center><div class="btn-go-to-contact">
+        <a asp-controller="ContactUs" asp-action="Contact" class="btn btn-primary">Go to Contact Page</a>
+        </div>
+    </center>
+
+
 
 </body>
 </html>
